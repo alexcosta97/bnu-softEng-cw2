@@ -47,3 +47,43 @@ Incremental development is based on the idea of developing an initial implementa
 Incremental development in some form is now the most common apprach for the development of application systems and software products. This approach can be either plan-driven, agile or, more usually, a mixture of these approaches. In a plan-driven approach, the systems increments are identified in advance; if an agile approach is adopted, the early increments are identified, but the development of later increments depends on progress and customer priorities.
 
 Incremental software development, which is a fundamental part of agile development methods, is better than a waterfall approach for systems whose requirements are likely to change during the development process. This is the case for most business systems and software products. Incremental development reflects the way that we solve problems. We rarely work out a complete problem solution in advance but move toward a solution in a series of steps, back-tracking when we realize that we have made a mistake. By developing the software incrementally, it is cheaper and easier to make changes in the software as it is being developed.
+
+Each increment or version of the system incorporates some of the functionality that is needed by the sustomer. Generally, the early increments of the system include the most important or most urgently required functionality. This means that the customer or user can evaluate the system at a relatively early stage in the development to see if it delivers what is required. If not, then only the current increment has to be changed, and possibly, new functionality defined in later increments.
+
+Incremental development has three major advantages over the waterfall model:
+\begin{enumerate}
+    \item The cost of implementing requirements changes is reduced. The amount of analysis and documentation that has to be redone is significantly less than is required with the waterfall model.
+    \item It is easier to get customer feedback on the development work that has been done. Customers can comment on demonstrations of the software and see how much has been implemented.. Customers find it difficult to judge progress from software design documents.
+    \item Early delivery and deployment of useful software to the customer is possible, even if all of the functionality has not been included. Customers are able to use and gain value from the software earlier than is possible with a waterfall process.
+\end{enumerate}
+
+From a management perspective, the incremental approach has two problems:
+\begin{enumerate}
+    \item The process is not visible. Managers need regular deliverables to measure progress. If systems are developed quickly, it is not cost effective to produce documents that reflect every version of the system.
+    \item System structure tends to degrade as new increments are added. Regular change leads to messy code as new functionality is added in whatever way is possible. It becomes increasingly difficult and costly to add new features to a system. To reduce structural degradation and general code messiness, agile methods suggest that you should regularly refactor (improve and restructure) the software.
+\end{enumerate}
+
+The problems of incremental develoment become particularly acute for large, complex, long-lifetime systems, where different teams develop different parts of the system. Large systems need a stable framework or architecture, and the reposibilities of the different teams working on parts of the system need to be clearly defined with respect to that architecture. This has to be planned in advance rather than developed incrementally.
+
+Incremental development does not mean that each increment has to be delivered to the system customer. The system can be developed incrementally and exposed to customers and other stakeholders for comment, without necessarily delivering it and deploying it in the customer's environment. Incremental delivery means that the software is used in real, operational processes, so user feedback is likely to be realistic. However, providing feedback is not always possible as experimenting with new software can disrupt normal business processes.
+
+\section{Integration and configuration}
+In the majority of software projects, there is some software reuse. This often happens informally when people working on the project know of or search for code that is similar to what is required. They look for these, modify them as needed, and integrate them with the new code that they have developed.
+
+This informal reuse takes place regardless of the development process that is used. However, since 2000, software development processes that focus on the reuse of existing software have become widely used. Reuse-oriented approaches rely on a base of reusable software components and an integrating framework for the composition of these components. Three types of software components are frequently reused:
+\begin{enumerate}
+    \item Stand-alone application systems that are configured for use in a particular environment. These systems are general-purpose systems that have many features but they have to be adapted for use in a specific application
+    \item Collections of objects that are developed as a component or as a package to be integrated with a component framework
+    \item Web services that are developed according to service standards and that are available for remote invocation over the Internet.
+\end{enumerate}
+
+A general process model for the integration and configuration approach would be the following:
+\begin{enumerate}
+    \item Requirements specification: The initial requirements for the system are proposed. These do not have to be elaborated in detail but should include brief descriptions of essential requirements and desirable system features
+    \item Software discovery and evaluation: Given an outline of the software requirements, a search is made for components and systems that provide the functionality required. Candidate componenets and systems are evaluated to see if they meet the essential requirements and if they are generally suitable for use in the system.
+    \item Requirements refinement: During this stage, the requirements are refined using information abotu the reusable components and applications that have been discoered. The requirements are modified to reflect the available components, and the system specification is re-defined. Where modificatoins are impossible, the component analysis activity may be reentered to search for alternative solutions.
+    \item Application system configuration: If an off-the-shelf application that meets the requirements is available, it may then be configured for use to create the new system.
+    \item Component adaptation and integration: If there is no off-the-shelf system, individual reusable components may be modified and new components developed. These are then integrated to create the system.
+\end{enumerate}
+
+Reuse-oriented software engineering, based around configuration and integration, has the obvious advantage of reducing the amount of software to be developed and so reducing cost and risks. It usually also leads to faster delivery of the software. However, requriements compromises are inevetable, and this may lead to a system that does not meet the real needs of users. Furthermore, some control over the system evolution is lost as new versions of the reusable components are not under the control of the organization using them.
