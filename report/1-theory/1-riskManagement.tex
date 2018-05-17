@@ -1,0 +1,101 @@
+\chapter{Risk Management}
+\section{Overview}
+Risks can be seen as something we'd prefer not to have happen. They may . threaten the project, the software being developed or the organization. Risk management involved anticipating the risks that might affect either the projkect schedule or the quality of the software produced in order to take action to avoid them.
+
+Risks can be categorized according to the type of risk. A complementary classification is to classify risks according to what these risks affect:
+\begin{enumerate}
+    \item Project risks affect the schedule and\/or resources of the project
+    \item Product risks affect the quality and\/or proformance of the software produced
+    \item Business risks affect the organization developing or procuring the software.
+\end{enumerate}
+
+Often ties, these risk categories can overlap. For example, losing an experienced engineer can present a project, product and business risk at the same time for the following reasons:
+\begin{itemize}
+    \item A project risk because it takes time to get a new team member up to speed
+    \item A product risk because a replacement may not be as experienced and make more errors
+    \item A business risk because the engineer's reputation might have been critical to win contracts.
+\end{itemize}
+
+For large projects, the results of the risk analysis should be recorded in a risk register along with a consequence analysis. The consequence analysis sets out the consequences of the risks for the project, product and business. Effective risk management makes it easier to cope with problems and to ensure that these do not lead to unacceptable budget or schedule slippage. For smaller projects, formal risk recording may not be required, but the project manager should still be aware of the risks and their consequences.
+
+The specific risks that may affect a project depen on the project and the organizational environment in which the software is being developed. However, there are common risks that are independent of the type of software that is being developed. These can occur in any software development project. Some examples of these are:
+\begin{enumerate}
+    \item Staff turnover: Experienced staff will leave the project before it is finished
+    \item Management change: There will be a change of company management with different priorities
+    \item Hardware unavailability: Hardware that is essential for the project will not be delivered on schedule
+    \item Requirements change: There will be a larger number of changes to the requirements than anticipated
+    \item Specification delays: Specifications of essential interfaces are not available on schedule
+    \item Size underestimate: The size of the system had been underestimated
+    \item Software toll underperformance: Software tools that support the project do not perform as anticipated
+    \item Technology change: The underlying technology on which the system is uilt is superseded by new technology
+    \item Product competition: A competitive product is marketed before the system is completed
+\end{enumerate}
+
+Software risk management is important because of the inherent uncertainties in software development. These uncertainties stem from loosely defined requirements, requirements changes due to changes in customer needs, difficulties in estimating the time and resources required for software development, and differences in individual skills. There is a need to anticipate risks, understand their impact on the project, the product and the business and take steps to avoid them. There may be a need to draw up contingency plans so that, if the risks do occur, immediate recovery action can be taken.
+
+There is a process of risk management that involves several stages. Here is the outline of it:
+\begin{enumerate}
+    \item Risk identification: Identify possible project, product and business risks
+    \item Risk analysis: Assessment of the likelihood and consequences of the risks identified
+    \item Risk planning: Make plans to address the risks, either by avoiding it or by minimizing its effects on the project
+    \item Risk monitoring: Regularly assess the risk and the plans for risk mitigation and revise the plans when more is known about the risk.
+\end{enumerate}
+
+For large projects, the outcomes of the risk management process should be documented in a risk management plan. It should include a discussion of the risks faced by the project, an analysis of these, and information on how it has been planned to manage the risk if it seems likely to be a problem.
+
+The risk management process is an iterative process that continues throughout a project. Onve an initial risk management plan has been drawn up, the situation needs to be monitored to detect emerging risks. As more information about the risks becomes available, the risks need to be re-analyzed and a decision needs to be made about whether the risk priority has changed or not. Depending on that, there may be a need to change the plans for risk avoidance and contigency management.
+
+On an agile development process, risk management is less formal. The same fundamental activities should still be followed and risks discussed, although these may not be formally documented. However, agile development also has a downside. Because of its reliance on people, staff turnover can have significant effects on the project, product and business. Because of the lack of formal documentation and its reliance on informal communication, it is very hard to maintain continuity and momentum if key people leave the project.
+
+\section{Risk Identification}
+As seen previously, risk identification is the first stage of the risk management process. It is concerned with identifying the risks that could pose a major threat to the software engineering proecss, the software being developed or the development organization. Risk identification may be a team process in which a team gets together to brainstorm possible risks. Alternatively, project managers may identify risks based on their experience of what went wrong on previous projects.
+
+As a starting point for risk identification, a checklist of different types of risk may be used. Six types of risk may be included in a risk checklist:
+\begin{enumerate}
+    \item Estimation risks arise from the management estimated of the resources required to build the system
+    \item Organizational risks arise from the organizational environment where the software is being developed
+    \item People risks are associated with the people in the development team
+    \item Requirements risks come from changes to the customer requirements and the process of managing the requriements change
+    \item Technology risks come from the software or hardware technologies that are used to develop the system
+    \item Tools risks come from the software tools and other support software used to develop the system
+\end{enumerate}
+
+Here is a list of the possible risks in each of these categories:
+\begin{itemize}
+    \item Estimation
+    \begin{enumerate}
+        \item The time required to develop the system is underestimated
+        \item The rate of defect repair is underestimated
+        \item The size of the software is underestimated
+    \end{enumerate}
+    \item Organizational
+    \begin{enumerate}
+        \item The organization is restructured so that different management are reponsible for the project
+        \item Organizational financial problems force reductions int he project budget
+    \end{enumerate}
+    \item People
+    \begin{enumerate}
+        \item It is impossible to recruit staff with the skills required
+        \item Key staff are ill and unavailable at critical times
+        \item Required training for staff is not available
+    \end{enumerate}
+    \item Requirements
+    \begin{enumerate}
+        \item Changes to requirements that require major design rework are proposed
+        \item Customers fail to understand the impact of requirements changes
+    \end{enumerate}
+    \item Technology
+    \begin{enumerate}
+        \item The database used in the system cannot process as many transactions per second as expected
+        \item Faults in reusable software components have to be repaired before these components are reused
+    \end{enumerate}
+    \item Tools
+    \begin{enumerate}
+        \item The code generated by software code generation tools is inefficient
+        \item Software tools cannot work together in an integrated way
+    \end{enumerate}
+\end{itemize}
+
+When the risk identification process has been finished, there should be a long list of risks that could occur and that could affect the product, the process and the business. This list then needs to be pruned to a manageable size. If there are too many risks, it is pratically impossible to keep track of all of them.
+
+\section{Risk Analysis}
