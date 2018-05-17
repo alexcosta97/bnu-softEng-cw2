@@ -1,0 +1,119 @@
+\chapter{Configuration and Version Management}
+\section{Overview}
+Software systems are constantly changing during development and use. Bugs are discovered and have to be fixed. System requirements change and we have to implement these changes in a new version of the system. New versions of hardware and system platforms are released, and we have to adapt our systems to work with them. Competitors introduce new features in their system that need to be matched. As changes are made to the product, a new version of the system is created. Most systems, therefore, can be thought of as a set of versions, each of which may have to be maintained and managed.
+
+Configuration management is concerned with the policies, processes and tools for managing changing software systems. We need to manage evolving systems because it is easy to lose track of what changes and component versions have been incorporated into each version of the system. Versions implement proposals for change, corrections of faults, and adaptations for different hardware and operating systems. Several versions mayy be under development and in use at the same time. If there is no effective configuration management procedures in place, there may a waste of effort in modifying the wrong version of a system, delivering the wrong version of a system to customers, or forgetting where the software source code for a particular version of the system or component is stored.
+
+Configuration management isn't just useful for large projects, and it also very useful for individual projects, where it is easy for a person to forget what changes have been made. It is however essential for team projects where several developers are all working at the same time on a software system. In that case, the configuration management system provides team members with access to the system being developed and manages the changes that they make to the code.
+
+Configuration management of a software system involves four closely related activities:
+\begin{itemize}
+    \item Version Control: This involves keeping track of the multiple versions of system components and ensuring that changes made to components by dufferent developers do not interfere with each other.
+    \item System building: This is the process of assembling program components, data, and libraries, then compiling and linking these to create an executable system.
+    \item Change management: This involves keeping track of requests for changes to delivered software from customers and developers, working out the costs and impact of making these changes, and decidding if and when the changes should be implemented.
+    \item Release management: This involves preparing software for external release and keeping track of the system verisons that have been released for customer use. 
+\end{itemize}
+
+Because of the large volume of ingormation to be managed and the relationships between configurationitems, tool support is essential for configuration management. Configuration management tools are used to store versions of system components, build systems from these components, track the releases of system versions to customers and keep track of change proposals. Configuration Management tools range from simple tools that support a single configuration management task, such as bug tracking, to integrated environments that support all configuration management activities.
+
+Agile development, where components and systems are changed several times a day, is impossible without configuration management tools. The definitive version of components are held in a shared project repository, and developers copy them into their own workspace. They make changes to the code and then use system-building tools to create a new system on their own computer for testing. Once they are happy with the changes made, they return the modified components to the project repository. This makes the modified components available to other team members.
+
+The development of a software product or custom software takes place in three distinct phases:
+\begin{enumerate}
+    \item A development phase: Where the development team is reponsible for managing the software configuration and new functionality is being added to the software. The development team decides on the changes to be made to the system.
+    \item A system testing phase: Where a version of the system is released internally for testing. This may be a responsibility of a quality management team or an individual or group within the development team. At this stage, no new functionality is added to the system. The changes made at this stage are bug fixes, performance improvements, and security vulnerability repairs. There may be some customer involvement as beta testers during this phase.
+    \item A release phase: Where the software is released to customers for use. After the release has been distributed, customers may submit bug reports and change requests. New versions of the released system may be developed to repair bugs and vulnerabilities and to include new features suggested by customers.
+\end{enumerate}
+
+For large systems, there is never just one "working" version of a system. There are always several version of the system at different stages of the development. Several teams may be involved in the development of different system versions.
+
+These different version have many different common components as well as components or component versions that are unique to that system version. The Configuration Management system keeps track of the components that are part os each version and invludes them as required in the system build.
+
+In large software projects, configuration management is sometimes part of software quality management. The quality manager is resposnible for both quality management and configuration management. When a pre-release version of the software is ready, the development team hands it over to the quality management team. The QM team checks that the system quality is acceptable. If so, then it becomes a controlled system, which means that all changes to the system have to be agreed on and recorded before they are implemented.
+
+There are many terms used for configuration management, and, depending on the methodology used, different terms may mean the same concept. Here are a few of them:
+\begin{itemize}
+    \item Baseline: A collection of component versions that make up a system. Baselines are controlled, which means that the component versions used in the baseline cannot be chaned. It is always possible to re-create a baseline from its constituent components.
+    \item Branching: The creation of a new codeline from a version in an existing codeline. The new codeline and the existing codeline may then develop independently.
+    \item Codeline: A set of versions of a software component and other configuration items o which that component depends
+    \item Configuration (version) control: The process of ensuring that versions of systems and components are recorded and maintained so that changes are managed and all versions of components are identified and stored for the lifetime of the system.
+    \item Configuration item or software configuration item (SCI): Anything associated with a software project (design, code, test data, document, etc) that has been placed under configuration control. Configuration items always have a unique identifier.
+    \item Mainline: A sequence of baselines representing different versions of a system.
+    \item Merging: The creation of a new version of a software component by merging separate versions in different codelines. These codelines may have been created by a previous branch of one of the codelines involved.
+    \item Release: A version of a system that has been released to customers (or other users in an organization) for use.
+    \item Repository: A shared database of versions of software components and meta-information about changes to these components.
+    \item System building: The creation of an executable system version by compiling and linking the appropriate versions of the components and libraries making up the system.
+    \item Version: An instance of a configuration item that differs, in some way, from other instances of that item. Versions should always have a unique identifier.
+    \item Workspace: A private work area where software can be modified without affecting other developers who may be using or modifying that software.
+\end{itemize}
+
+\section{Version Management}
+Version management is the process of keeping track of different versions of software components and the systems in which these components are used. It also involves ensuring that changes made by different developers to these versions do not interfere with each other. In other words, version management is the process of managing codelines and baselines.
+
+Baselines may be specified using a configuration language in which we define what components should be included in a specific version of a system. It is possible to explicitly specify an individual component version or simply to specify the component identifier.
+
+Baselines are important because we often have to re-create an individual version of a system. For example, a product line may be instantiated so that there are specific system versions for each system customer. We may have to recreate the versino delivered to a customer if they report bugs in their system that have to be repaired.
+
+Version control systems identify, store and control access to the different versions of components. There are two tyoes of modern version control system:
+\begin{enumerate}
+    \item Centralized systems, where a single master repository maintains all versions of the software components that are being developed. Subverion is a widely used example of a centralized VC system.
+    \item Distributed systems, where multiple versions of the component repository exist at the same time. Git is a widely used example of a distributed VC system.
+\end{enumerate}
+
+Centralized and distributed VC systems provide comparable functionality but implement this functinoality in different ways. Key features of these systems include:
+\begin{enumerate}
+    \item Version and release identification: Managed versions of a component are assigned unique identifiers when they are submitted to the system. These identifiers allow different versions of the same component to be managed, without changing the component name. Versions may also be assigned attributes, with the set of attributes used to uniquely identify each version.
+    \item Change history recording: The VC system keeps records of the changes that have been made to create a new version of a component from an earlier version in some systems, these changes may be used to select a particular system version. This involves tagging components with keywords describing the changes made. We then use these tags to select the components to be included in a baseline.
+    \item Independent development: Different developers may be working on the same component at the same time. The version control system keeps track of components that have been checked out for editing and ensures that changes made to a component by different developers do not interfere.
+    \item Project support: A version control system may support the development of several projects, which share components. It is usually possible to check in and check out all of the files associated with a project rather than having to work with one file or directory at a time.
+    \item Storage management: Rather than maintain separate copies of all versions of a component, the version control system may use efficient mechanisms to ensure that duplicate copies of identical files are not maintained. Where there are only small differences between files, the VC system may store these differences rather than maintain multiple copies of files. A specific version may be automatically re-created by applying the differences to a master version.
+\end{enumerate}
+
+\subsection{Versions, Variants and Releases}
+\begin{itemize}
+    \item Version: An instance of a system which is functionally distict in some way from other system instances
+    \item Variant: An instance of a system which is functionally identical but non-functionally distinct from other instances of a system
+    \item Release: An instance of a system which is distributed to users outside of the development team
+\end{itemize}
+
+\subsection{Version identification}
+Procedures should be defined that allow for version identification so there is an unambiguous way to identify the different component version. There are three basic techniques for component identification:
+\begin{itemize}
+    \item Version numbering
+    \item Attribute-based identification
+    \item Change-oriented identification
+\end{itemize}
+
+\subsubsection{Version Numbering}
+Version numbering is a simple naming scheme that uses a linear derivation. The actual derivation structure is a tree or a network rather than a sequence, where names are not meaningful and where a hierarchical naming scheme leads to fewer errors in version identification.
+For example, the first index of the version would indicate the version, the second would indicate the variant and the third and last the release.
+
+\section{Configuration Management Plan}
+The configuration management plan defines the types of documents to be managed and a document naming scheme, who takes responsibility for the configuration management procedures and the creation of baselines. It also defines policies for change control and version management the records which must be maintained.
+
+It describes which tools should be used to assist the process and any limitations in their use, as well as the process for their use, as well as the database used to record the configuration information. It may also invlude information such as the configuration management of external software, process auditing and others.
+
+\section{Change management}
+A change management procedure should be put to practice to make sure that changes are tracked and that they are developed in the most cost-effective way. The following is an example of a change management process:
+\begin{itemize}
+    \item Request change by completing a change request from
+    \item Analyze change request
+    \item If the change is valid then
+    \begin{itemize}
+        \item Assess how the change might be implemented
+        \item Assess change cost
+        \item Submit request to change control board
+    \end{itemize}
+    \item If the change is accepted then
+    \begin{itemize}
+        \item Make changes to software
+        \item Submit changed software for quality approval until quality is adequate
+    \end{itemize}
+    \item Create a new system version
+\end{itemize}
+
+\subsection{Change Request Form}
+The definition of a change request form is part of the configuration management planning process. The form records the change proposed, requestor of change, the reason was suggested and the urgency of change. It also records change evaluation, impact analysis, change cost and recommendations.
+
+\subsection{Change control board}
+Changes should be reviewed by an external group who decide whether or not they are cost-effective from a strategic and organizational viewpoint rather than a technical viewpoint. It should be independent of the group responsible for the system. The group is sometimes called a change control board. The change control board may include representatives from client and contractor staff.
