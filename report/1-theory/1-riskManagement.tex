@@ -99,3 +99,48 @@ Here is a list of the possible risks in each of these categories:
 When the risk identification process has been finished, there should be a long list of risks that could occur and that could affect the product, the process and the business. This list then needs to be pruned to a manageable size. If there are too many risks, it is pratically impossible to keep track of all of them.
 
 \section{Risk Analysis}
+During the risk analysis process, we have to consider each identified risk and make a judgement about the probability and seriousness of that risk. There is no easy way to do it, and the project manager needs to rely a lot on their judgement and experience from previous projects and the problems that arose in them. It is not possible to make precise, numeric assessment of the probability and seriousness of each risk. Rather, the risk should be assigned to one of a number of bands:
+\begin{enumerate}
+    \item The probability of the risk might be assessed as insignificant, low, moderate, high or very high
+    \item The effects of the risk might be assessed as catastrophic (threaten the survival of the project), serious (would cause major delays), tolerable (delays are within allowed contigency) or insignificant
+\end{enumerate}
+
+After that is possible to tabulate the results of the analysis process using a table ordered according to the seriousness of the risk. To make this assessment, we need detailed information about the project, the process, the development team, and the organization.
+
+Of course, both the probability and the assessment of the effects of a risk may change as more information about the risk becomes available and as risk management plans are implemented. We should therefore update this table during each iteration of the risk management process.
+
+Once the risks have been analyzed and ranked, we should assess which if these risks are the most significant. The judgement must depend on a combination of the probability of the risk arising and the effects of that risk. In general, catastrophic risks should always be considered, as should all serious risks that have more than a moderate probability of occurence.
+
+\cite{spiralModelSoftDev} recommends identifying and monitoring the "top 10" risks. The right number of risks to monitor, however, should depend on the project.
+
+\section{Risk planning}
+The risk planning process develops strategies to manage the key risks that threaten the project. For each risk, we have to think of actions that we might take to minimize the disruption to the project if the problem idenfiied in the risk occurs. We should also think about the information that we need to collect while monitoring the project so that emerging problems can be detected before they become serious.
+
+In risk planning, "what-if" questions need to be asked that consider both individual risks, combination of risks, and external factors that affect these risks. For example, questions that might be asked are:
+\begin{enumerate}
+    \item What if several engineers are ill at the same time?
+    \item What if an economic downturn leads to budget cuts of 20\% for the project?
+    \item What if the performance of open-source software is inadequate and the only expert on that open-source software leaves?
+    \item What if the company that supplies and maintains software components goes out of business?
+    \item What if the customer fails to deliver the revised requriements as predicted?
+\end{enumerate}
+
+Based on the answers for those "what-if" questions, we may then devise strategies for managing the risks. Usually, the risk management strategies fall into three categories:
+\begin{enumerate}
+    \item Avoidance strategies: Following these strategies means that the probability of the risk arising is reduced. An example of that would be strategy to replace potentially defective components with bought-in components known for their reliability
+    \item Minimization strategies: Foolowing these strategies means that the impact of the risk is reduced. An example of that, for example, would be to reorganize the team to have more overlap of work and people understanding each other jobs to minimize the impact of staff illness
+    \item Contigency plans: Following those strategies means that the team is prepared for the worst and have a strategy in place to deal with it. An example of that would be to prepare a briefing document explaining the importance of the project and its contribuition for the business goals in case of organizational financial problems
+\end{enumerate}
+
+It is obviously for the best to use strategies that avoid risks. If that is not possible, we should then use a strategy that reduces the chances of that risk having serious effects. Finally, we should have strategies in place to cope with the risk if it arises. These should reduce the overall impact of a risk on the project or product.
+
+\section{Risk Monitoring}
+Risk monitoring is the process of checking that our assumptions about the product, process and business risks have not changed. We should regularly assess each of the identified risk to decide whether or not the effects of the risk have changed. To do this, we have to look at other factors, such as the number of requirements change requests, which give us clues about the risk probability and its effects. These factors are obviously dependent on the types of risk. Factors that may be helpful in assessing these risk types are:
+\begin{enumerate}
+    \item Estimation risks: Failure to meet agreed schedule; failure to clear reported defects
+    \item Organizational risks: Organizational gossip; lack of action by senior management
+    \item People risks: Poor staff morale; poor relationships among team members; high staff turnover
+    \item Requirements risks: Many requirements change requests; customer complaints
+    \item Technology risks: Late delivery of hardware or support software; many reported technology problems
+    \item Tools risks: Reluctance by team members to use tools; complaints about software tools; requests for faster computers/more memory, and so on
+\end{enumerate}
