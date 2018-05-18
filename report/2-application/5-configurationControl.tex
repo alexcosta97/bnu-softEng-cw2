@@ -1,0 +1,18 @@
+\chapter{Configuration Control and Version Management Strategy}
+In order to keep track of the software versions and the changes made to the system as it goes, we have decided to use the following software tools:
+
+\begin{itemize}
+    \item Git as a version management system
+    \item GitHub as the platform hosting the repository
+\end{itemize}
+
+By using these software tools, we have a system that allows us to completely keep track of the versions of the software that are being developed and those who have been currently released. Furthermore, because of the way GitHub allows users to work in their repositories, we can also keep track of issues and problems as they arise and allows us for a better organization of features to be implemented, bugs to be fixed, etc for the different version.
+
+Thanks to the branching system of Git, we can also create different branches for when trying to implement a new feature or fix a bug without changing any of the code from the released version, allowing us to make the changes and new versions easily and effortlessly.
+
+Versions released can be managed through the commit used when a release has been made from the master branch, which allows us to know at which point of the code the version was released at, and rollback if a customer is having an issue with that particular version of the software in an individual workspace.
+
+To keep track of the versions released, we decided upon using the numbering system explained in the theory part of this work, adding a name to each major version for easier distinguishment of the versions.
+
+
+This configuration control and versioning system came in handy when a user reported to us a bug on an older released version of the system. Thanks to our numbering system, we could very quickly find the release that the user was talking about, and thanks to the Git system, the person in charge of solving the issue could very quickly roll back their private repository to that version, create a new branch and work on solving the issue, to then release a new and improved release for that same version of the software.
